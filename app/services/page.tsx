@@ -153,7 +153,7 @@ export default function ServicesPage() {
                       asChild
                       className="w-full bg-emerald-600 text-white hover:bg-emerald-700"
                     >
-                      <Link href="#booking">
+                      <Link href="/booking">
                         Get Started
                         <ArrowRight className="ml-2 size-4" />
                       </Link>
@@ -176,7 +176,7 @@ export default function ServicesPage() {
           size="lg"
           className="mt-6 bg-emerald-600 text-white hover:bg-emerald-700"
         >
-          <Link href="#booking">Book a Free Consultation</Link>
+          <Link href="/booking">Book a Free Consultation</Link>
         </Button>
       </div>
     </div>

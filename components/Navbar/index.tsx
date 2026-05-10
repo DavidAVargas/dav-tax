@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 const navLinks = [
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
-  { label: "Booking", href: "#booking" },
+  { label: "Booking", href: "/booking" },
 ];
 
 export function Navbar() {
@@ -35,7 +35,7 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           <Button asChild className="bg-emerald-600 text-white hover:bg-emerald-700">
-            <Link href="#booking">Book Now</Link>
+            <Link href="/booking">Book Now</Link>
           </Button>
         </div>
 
@@ -68,7 +68,7 @@ export function Navbar() {
               asChild
               className="mt-2 bg-emerald-600 text-white hover:bg-emerald-700"
             >
-              <Link href="#booking" onClick={() => setMobileOpen(false)}>
+              <Link href="/booking" onClick={() => setMobileOpen(false)}>
                 Book Now
               </Link>
             </Button>

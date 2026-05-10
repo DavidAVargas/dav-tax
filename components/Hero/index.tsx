@@ -29,13 +29,13 @@ export function Hero() {
           size="lg"
           className="bg-emerald-600 text-white hover:bg-emerald-700"
         >
-          <Link href="#booking">
+          <Link href="/booking">
             Book a Free Consultation
             <ArrowRight className="ml-2 size-4" />
           </Link>
         </Button>
         <Button asChild size="lg" variant="outline">
-          <Link href="#services">View Services</Link>
+          <Link href="/services">View Services</Link>
         </Button>
       </div>
 
