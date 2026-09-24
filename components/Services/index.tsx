@@ -46,7 +46,7 @@ export function Services() {
                 className="group rounded-xl border border-border bg-card p-6 transition-shadow hover:shadow-md"
               >
                 <div className="mb-4 inline-flex rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/40">
-                  <Icon className="size-6 text-emerald-600" />
+                  <Icon className="size-6 text-emerald-600" aria-hidden="true" />
                 </div>
                 <h3 className="mb-2 text-lg font-semibold">{service.title}</h3>
                 <p className="mb-4 text-sm text-muted-foreground">

@@ -13,11 +13,11 @@ export function Footer() {
 
         <div className="flex flex-col items-center gap-3 text-sm text-emerald-100 sm:items-end">
           <div className="flex items-center gap-2">
-            <Phone className="size-4" />
+            <Phone className="size-4" aria-hidden="true" />
             <span>(000) 000-0000</span>
           </div>
           <div className="flex items-center gap-2">
-            <Mail className="size-4" />
+            <Mail className="size-4" aria-hidden="true" />
             <span>contact@davtax.com</span>
           </div>
         </div>

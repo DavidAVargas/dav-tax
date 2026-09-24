@@ -106,7 +106,7 @@ export default function ServicesPage() {
                 <div className="flex-1">
                   <div className="mb-4 flex items-center gap-3">
                     <div className="inline-flex rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/40">
-                      <Icon className="size-6 text-emerald-600" />
+                      <Icon className="size-6 text-emerald-600" aria-hidden="true" />
                     </div>
                     <div>
                       <h2 id={headingId} className="text-xl font-bold">{service.title}</h2>
@@ -123,7 +123,7 @@ export default function ServicesPage() {
                           key={h.label}
                           className="flex items-center gap-3 rounded-lg border border-border bg-background px-4 py-3"
                         >
-                          <HIcon className="size-5 shrink-0 text-emerald-600" />
+                          <HIcon className="size-5 shrink-0 text-emerald-600" aria-hidden="true" />
                           <span className="text-sm font-medium">{h.label}</span>
                         </div>
                       );
@@ -146,7 +146,7 @@ export default function ServicesPage() {
                     <ul className="mb-6 space-y-2">
                       {service.includes.map((item) => (
                         <li key={item} className="flex items-start gap-2 text-sm">
-                          <Check className="mt-0.5 size-4 shrink-0 text-emerald-600" />
+                          <Check className="mt-0.5 size-4 shrink-0 text-emerald-600" aria-hidden="true" />
                           {item}
                         </li>
                       ))}
@@ -157,7 +157,7 @@ export default function ServicesPage() {
                     >
                       <Link href="/booking">
                         Get Started
-                        <ArrowRight className="ml-2 size-4" />
+                        <ArrowRight className="ml-2 size-4" aria-hidden="true" />
                       </Link>
                     </Button>
                   </div>

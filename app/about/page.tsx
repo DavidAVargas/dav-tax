@@ -96,7 +96,7 @@ export default function AboutPage() {
                 className="flex gap-4 rounded-xl border border-border bg-card p-5"
               >
                 <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald-50 dark:bg-emerald-950/40">
-                  <Icon className="size-5 text-emerald-600" />
+                  <Icon className="size-5 text-emerald-600" aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="font-semibold">{cred.title}</h3>
@@ -139,7 +139,7 @@ export default function AboutPage() {
         >
           <Link href="/booking">
             Book a Free Consultation
-            <ArrowRight className="ml-2 size-4" />
+            <ArrowRight className="ml-2 size-4" aria-hidden="true" />
           </Link>
         </Button>
       </section>

@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section className="flex flex-col items-center justify-center px-4 py-24 text-center sm:px-6 sm:py-32">
       <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 dark:border-emerald-800 dark:bg-emerald-950/40">
-        <ShieldCheck className="size-4 text-emerald-600" />
+        <ShieldCheck className="size-4 text-emerald-600" aria-hidden="true" />
         <span className="text-sm font-medium text-emerald-700 dark:text-emerald-400">
           IRS Certified Tax Professional
         </span>
@@ -31,7 +31,7 @@ export function Hero() {
         >
           <Link href="/booking">
             Book a Free Consultation
-            <ArrowRight className="ml-2 size-4" />
+            <ArrowRight className="ml-2 size-4" aria-hidden="true" />
           </Link>
         </Button>
         <Button asChild size="lg" variant="outline">

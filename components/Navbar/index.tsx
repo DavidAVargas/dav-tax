@@ -111,39 +111,42 @@ export function Navbar() {
               aria-expanded={mobileOpen}
               aria-controls={MOBILE_MENU_ID}
             >
-              {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+              {mobileOpen ? (
+                <X className="size-5" aria-hidden="true" />
+              ) : (
+                <Menu className="size-5" aria-hidden="true" />
+              )}
             </Button>
           </div>
         </div>
 
-        {mobileOpen && (
-          <div
-            id={MOBILE_MENU_ID}
-            ref={menuRef}
-            className="border-t border-border/40 bg-background px-4 py-4 -mx-4 sm:-mx-6 md:hidden"
-          >
-            <div className="flex flex-col gap-4 px-4 sm:px-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-foreground"
-                  onClick={closeMenu}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <Button
-                asChild
-                className="mt-2 bg-emerald-600 text-white hover:bg-emerald-700"
+        <div
+          id={MOBILE_MENU_ID}
+          ref={menuRef}
+          hidden={!mobileOpen}
+          className="border-t border-border/40 bg-background px-4 py-4 -mx-4 sm:-mx-6 md:hidden"
+        >
+          <div className="flex flex-col gap-4 px-4 sm:px-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground"
+                onClick={closeMenu}
               >
-                <Link href="/booking" onClick={closeMenu}>
-                  Book Now
-                </Link>
-              </Button>
-            </div>
+                {link.label}
+              </Link>
+            ))}
+            <Button
+              asChild
+              className="mt-2 bg-emerald-600 text-white hover:bg-emerald-700"
+            >
+              <Link href="/booking" onClick={closeMenu}>
+                Book Now
+              </Link>
+            </Button>
           </div>
-        )}
+        </div>
       </nav>
     </header>
   );
