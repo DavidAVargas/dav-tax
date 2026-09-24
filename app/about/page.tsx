@@ -45,8 +45,8 @@ export default function AboutPage() {
         </p>
       </div>
 
-      <div className="mb-14 rounded-2xl border border-border bg-card p-8 sm:p-10">
-        <h2 className="mb-6 text-2xl font-bold">Why I Started DAV Tax</h2>
+      <section aria-labelledby="why-started-heading" className="mb-14 rounded-2xl border border-border bg-card p-8 sm:p-10">
+        <h2 id="why-started-heading" className="mb-6 text-2xl font-bold">Why I Started DAV Tax</h2>
         <div className="space-y-5 text-muted-foreground leading-relaxed">
           <p>
             For a long time, I was one of those people who just handed their documents to someone
@@ -83,10 +83,10 @@ export default function AboutPage() {
             That&apos;s what DAV Tax is.
           </p>
         </div>
-      </div>
+      </section>
 
-      <div className="mb-14">
-        <h2 className="mb-6 text-2xl font-bold">Credentials & Coverage</h2>
+      <section aria-labelledby="credentials-heading" className="mb-14">
+        <h2 id="credentials-heading" className="mb-6 text-2xl font-bold">Credentials & Coverage</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {credentials.map((cred) => {
             const Icon = cred.icon;
@@ -106,10 +106,10 @@ export default function AboutPage() {
             );
           })}
         </div>
-      </div>
+      </section>
 
-      <div className="mb-14 rounded-2xl border border-border bg-card p-8 sm:p-10">
-        <h2 className="mb-4 text-2xl font-bold">What You Can Expect</h2>
+      <section aria-labelledby="expect-heading" className="mb-14 rounded-2xl border border-border bg-card p-8 sm:p-10">
+        <h2 id="expect-heading" className="mb-4 text-2xl font-bold">What You Can Expect</h2>
         <ul className="space-y-3 text-muted-foreground">
           {[
             "Flat-rate pricing — you know the cost before we start, no surprises",
@@ -125,10 +125,10 @@ export default function AboutPage() {
             </li>
           ))}
         </ul>
-      </div>
+      </section>
 
-      <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center dark:border-emerald-800 dark:bg-emerald-950/30">
-        <h3 className="text-xl font-bold">Ready to get your taxes done?</h3>
+      <section aria-labelledby="about-cta-heading" className="rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center dark:border-emerald-800 dark:bg-emerald-950/30">
+        <h2 id="about-cta-heading" className="text-xl font-bold">Ready to get your taxes done?</h2>
         <p className="mt-2 text-muted-foreground">
           Book a free consultation — no commitment, no fees upfront. Just a quick call to get you sorted.
         </p>
@@ -142,7 +142,7 @@ export default function AboutPage() {
             <ArrowRight className="ml-2 size-4" />
           </Link>
         </Button>
-      </div>
+      </section>
     </div>
   );
 }

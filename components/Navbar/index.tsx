@@ -77,72 +77,74 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="text-lg font-semibold tracking-tight">
-          DAV Tax<span className="text-emerald-600">.</span>
-        </Link>
+      <nav className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="flex h-16 items-center justify-between">
+          <Link href="/" className="text-lg font-semibold tracking-tight">
+            DAV Tax<span className="text-emerald-600">.</span>
+          </Link>
 
-        <div className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-
-        <div className="hidden items-center gap-3 md:flex">
-          <Button asChild className="bg-emerald-600 text-white hover:bg-emerald-700">
-            <Link href="/booking">Book Now</Link>
-          </Button>
-        </div>
-
-        <div className="flex items-center gap-2 md:hidden">
-          <Button
-            ref={toggleButtonRef}
-            size="icon"
-            variant="ghost"
-            onClick={() => setMobileOpen((open) => !open)}
-            aria-label="Toggle menu"
-            aria-expanded={mobileOpen}
-            aria-controls={MOBILE_MENU_ID}
-          >
-            {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-          </Button>
-        </div>
-      </nav>
-
-      {mobileOpen && (
-        <div
-          id={MOBILE_MENU_ID}
-          ref={menuRef}
-          className="border-t border-border/40 bg-background px-4 py-4 md:hidden"
-        >
-          <div className="flex flex-col gap-4">
+          <div className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground"
-                onClick={closeMenu}
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
                 {link.label}
               </Link>
             ))}
+          </div>
+
+          <div className="hidden items-center gap-3 md:flex">
+            <Button asChild className="bg-emerald-600 text-white hover:bg-emerald-700">
+              <Link href="/booking">Book Now</Link>
+            </Button>
+          </div>
+
+          <div className="flex items-center gap-2 md:hidden">
             <Button
-              asChild
-              className="mt-2 bg-emerald-600 text-white hover:bg-emerald-700"
+              ref={toggleButtonRef}
+              size="icon"
+              variant="ghost"
+              onClick={() => setMobileOpen((open) => !open)}
+              aria-label="Toggle menu"
+              aria-expanded={mobileOpen}
+              aria-controls={MOBILE_MENU_ID}
             >
-              <Link href="/booking" onClick={closeMenu}>
-                Book Now
-              </Link>
+              {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
             </Button>
           </div>
         </div>
-      )}
+
+        {mobileOpen && (
+          <div
+            id={MOBILE_MENU_ID}
+            ref={menuRef}
+            className="border-t border-border/40 bg-background px-4 py-4 -mx-4 sm:-mx-6 md:hidden"
+          >
+            <div className="flex flex-col gap-4 px-4 sm:px-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground"
+                  onClick={closeMenu}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Button
+                asChild
+                className="mt-2 bg-emerald-600 text-white hover:bg-emerald-700"
+              >
+                <Link href="/booking" onClick={closeMenu}>
+                  Book Now
+                </Link>
+              </Button>
+            </div>
+          </div>
+        )}
+      </nav>
     </header>
   );
 }

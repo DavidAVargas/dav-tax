@@ -95,9 +95,11 @@ export default function ServicesPage() {
       <div className="space-y-8">
         {services.map((service, index) => {
           const Icon = service.icon;
+          const headingId = `service-heading-${index}`;
           return (
-            <div
+            <article
               key={service.title}
+              aria-labelledby={headingId}
               className="rounded-2xl border border-border bg-card p-8 transition-shadow hover:shadow-md"
             >
               <div className="flex flex-col gap-6 lg:flex-row lg:gap-12">
@@ -107,7 +109,7 @@ export default function ServicesPage() {
                       <Icon className="size-6 text-emerald-600" />
                     </div>
                     <div>
-                      <h2 className="text-xl font-bold">{service.title}</h2>
+                      <h2 id={headingId} className="text-xl font-bold">{service.title}</h2>
                       <p className="text-sm text-muted-foreground">{service.tagline}</p>
                     </div>
                   </div>
@@ -161,13 +163,13 @@ export default function ServicesPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </article>
           );
         })}
       </div>
 
-      <div className="mt-14 rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center dark:border-emerald-800 dark:bg-emerald-950/30">
-        <h3 className="text-xl font-bold">Not sure which service you need?</h3>
+      <section aria-labelledby="services-cta-heading" className="mt-14 rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center dark:border-emerald-800 dark:bg-emerald-950/30">
+        <h2 id="services-cta-heading" className="text-xl font-bold">Not sure which service you need?</h2>
         <p className="mt-2 text-muted-foreground">
           Book a free consultation and we&apos;ll figure out exactly what you need — no commitment required.
         </p>
@@ -178,7 +180,7 @@ export default function ServicesPage() {
         >
           <Link href="/booking">Book a Free Consultation</Link>
         </Button>
-      </div>
+      </section>
     </div>
   );
 }
