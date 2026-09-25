@@ -131,7 +131,7 @@ export default function ServicesPage() {
                   </div>
 
                   {service.note && (
-                    <p className="mt-4 text-sm text-emerald-600 dark:text-emerald-400">
+                    <p className="mt-4 text-sm text-emerald-700 dark:text-emerald-400">
                       * {service.note}
                     </p>
                   )}
@@ -153,7 +153,7 @@ export default function ServicesPage() {
                     </ul>
                     <Button
                       asChild
-                      className="w-full bg-emerald-600 text-white hover:bg-emerald-700"
+                      className="w-full bg-emerald-700 text-white hover:bg-emerald-800"
                     >
                       <Link href="/booking">
                         Get Started
@@ -176,7 +176,7 @@ export default function ServicesPage() {
         <Button
           asChild
           size="lg"
-          className="mt-6 bg-emerald-600 text-white hover:bg-emerald-700"
+          className="mt-6 bg-emerald-700 text-white hover:bg-emerald-800"
         >
           <Link href="/booking">Book a Free Consultation</Link>
         </Button>

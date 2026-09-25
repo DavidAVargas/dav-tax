@@ -27,7 +27,7 @@ export function Hero() {
         <Button
           asChild
           size="lg"
-          className="bg-emerald-600 text-white hover:bg-emerald-700"
+          className="bg-emerald-700 text-white hover:bg-emerald-800"
         >
           <Link href="/booking">
             Book a Free Consultation

@@ -8,7 +8,7 @@ export function Footer() {
           <p className="text-lg font-semibold">
             DAV Tax<span className="text-emerald-300">.</span>
           </p>
-          <p className="mt-1 text-sm text-emerald-200">Professional Tax Preparation</p>
+          <p className="mt-1 text-sm text-emerald-100">Professional Tax Preparation</p>
         </div>
 
         <div className="flex flex-col items-center gap-3 text-sm text-emerald-100 sm:items-end">
@@ -23,7 +23,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-emerald-600 px-4 py-4 text-center text-xs text-emerald-300">
+      <div className="border-t border-emerald-600 px-4 py-4 text-center text-xs text-emerald-100">
         © {new Date().getFullYear()} DAV Tax. All rights reserved.
       </div>
     </footer>

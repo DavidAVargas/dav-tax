@@ -135,7 +135,7 @@ export default function AboutPage() {
         <Button
           asChild
           size="lg"
-          className="mt-6 bg-emerald-600 text-white hover:bg-emerald-700"
+          className="mt-6 bg-emerald-700 text-white hover:bg-emerald-800"
         >
           <Link href="/booking">
             Book a Free Consultation

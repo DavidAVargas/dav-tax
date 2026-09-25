@@ -96,7 +96,7 @@ export function Navbar() {
           </div>
 
           <div className="hidden items-center gap-3 md:flex">
-            <Button asChild className="bg-emerald-600 text-white hover:bg-emerald-700">
+            <Button asChild className="bg-emerald-700 text-white hover:bg-emerald-800">
               <Link href="/booking">Book Now</Link>
             </Button>
           </div>
@@ -139,7 +139,7 @@ export function Navbar() {
             ))}
             <Button
               asChild
-              className="mt-2 bg-emerald-600 text-white hover:bg-emerald-700"
+              className="mt-2 bg-emerald-700 text-white hover:bg-emerald-800"
             >
               <Link href="/booking" onClick={closeMenu}>
                 Book Now
